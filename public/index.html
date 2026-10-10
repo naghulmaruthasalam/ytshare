@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YTShare</title>
+  <meta name="description" content="Search, watch and share YouTube videos.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>▶ YTShare</h1>
+    <form id="search" role="search">
+      <input id="q" type="search" placeholder="Search YouTube or paste a video link…" autocomplete="off" aria-label="Search">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main>
+    <section id="watch" hidden>
+      <div class="player-wrap"><div id="player"></div></div>
+      <h2 id="v-title"></h2>
+      <p id="v-meta" class="meta"></p>
+      <div class="actions">
+        <button id="share" type="button">🔗 Share</button>
+        <a id="open-yt" target="_blank" rel="noopener">Open on YouTube</a>
+        <span id="toast" role="status" aria-live="polite"></span>
+      </div>
+      <details><summary>Description</summary><pre id="v-desc"></pre></details>
+    </section>
+
+    <section>
+      <h3 id="list-title">Trending</h3>
+      <div id="error" class="error" hidden></div>
+      <ul id="results" class="grid"></ul>
+      <button id="more" type="button" hidden>Load more</button>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

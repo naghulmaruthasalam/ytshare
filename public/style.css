@@ -1,0 +1,28 @@
+:root { --bg:#0f0f10; --card:#1a1a1c; --fg:#f1f1f1; --muted:#9a9aa0; --accent:#ff3d3d; }
+@media (prefers-color-scheme: light) {
+  :root { --bg:#fafafa; --card:#fff; --fg:#111; --muted:#666; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.4 system-ui,sans-serif; }
+header { display:flex; gap:1rem; align-items:center; flex-wrap:wrap; padding:.75rem 1rem; position:sticky; top:0; background:var(--bg); z-index:2; border-bottom:1px solid #8884; }
+h1 { margin:0; font-size:1.25rem; color:var(--accent); }
+#search { flex:1; display:flex; gap:.5rem; min-width:240px; }
+#q { flex:1; padding:.6rem .8rem; border-radius:999px; border:1px solid #8886; background:var(--card); color:var(--fg); font:inherit; }
+button, .actions a { padding:.55rem 1rem; border-radius:999px; border:0; background:var(--accent); color:#fff; font:inherit; cursor:pointer; text-decoration:none; }
+.actions a { background:transparent; color:var(--muted); border:1px solid #8886; }
+main { max-width:1200px; margin:0 auto; padding:1rem; }
+.player-wrap { position:relative; aspect-ratio:16/9; background:#000; border-radius:12px; overflow:hidden; }
+.player-wrap iframe { position:absolute; inset:0; width:100%; height:100%; }
+.meta { color:var(--muted); margin:.25rem 0 .75rem; }
+.actions { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+#toast { color:var(--muted); }
+details { margin:1rem 0; } pre { white-space:pre-wrap; font:inherit; color:var(--muted); }
+.grid { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; }
+.card { background:var(--card); border-radius:12px; overflow:hidden; cursor:pointer; border:0; padding:0; text-align:left; color:inherit; width:100%; }
+.card:hover, .card:focus-visible { outline:2px solid var(--accent); }
+.card img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+.card div { padding:.6rem .75rem; }
+.card b { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.card small { color:var(--muted); }
+.error { background:#ff3d3d22; border:1px solid var(--accent); padding:.75rem; border-radius:8px; margin-bottom:1rem; }
+#more { display:block; margin:1rem auto; }
